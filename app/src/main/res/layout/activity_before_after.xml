@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"> <!-- 여기서 배경색을 흰색으로 설정 -->
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btnBackDrawingMask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp" />
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Eraser"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- Container for Image Views -->
+    <LinearLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/bottomLayout"
+        android:layout_below="@id/tvHeader"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"> <!-- 여기서 배경색을 투명으로 설정 -->
+
+        <!-- Image View Before -->
+        <ImageView
+            android:id="@+id/imageViewPhotoBefore"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            android:background="#e0e0e0"
+            android:scaleType="centerCrop" />
+
+        <!-- Image View After -->
+        <ImageView
+            android:id="@+id/imageViewPhotoAfter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:background="#e0e0e0"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@android:color/transparent"> <!-- 여기서 배경색을 투명으로 설정 -->
+
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</RelativeLayout>

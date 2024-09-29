@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drawing"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnThickness10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 pt" />
+
+    <Button
+        android:id="@+id/btnThickness25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 pt"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnThickness50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 pt"
+        android:layout_marginTop="8dp" />
+
+    <!-- Eraser Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eraser"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnEraser10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 pt" />
+
+    <Button
+        android:id="@+id/btnEraser25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 pt"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnEraser50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 pt"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
