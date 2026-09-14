@@ -20,6 +20,14 @@
 - Coroutine IO 처리와 응답 이미지 저장
 - 객체 제거 전후 비교와 기기 앨범 저장
 
+## 실행 전 설정
+
+프로젝트 루트의 `local.properties`에 Clipdrop API 키를 추가합니다. 이 파일은 Git에서 제외됩니다.
+
+```properties
+CLIPDROP_API_KEY=your_api_key_here
+```
+
 자체 인페인팅 모델은 다른 팀원이 개발했습니다. 컴퓨터에서는 실행됐지만 Android 환경에서 결과 이미지가 깨지는 문제가 해결되지 않았습니다.
 
 ## 기술적 판단
