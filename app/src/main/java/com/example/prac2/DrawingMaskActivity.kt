@@ -219,9 +219,14 @@ class DrawingMaskActivity : AppCompatActivity() {
                     .addFormDataPart("mode", "quality")
                     .build()
 
+                val apiKey = BuildConfig.CLIPDROP_API_KEY
+                if (apiKey.isBlank()) {
+                    throw IOException("CLIPDROP_API_KEY is not configured in local.properties")
+                }
+
                 // API 요청 생성 (API 키 필요)
                 val request = Request.Builder()
-                    .header("x-api-key", "b17f3de033a064a14784d5e749ec08d113fed2a8d8bdefc9c2fecf80f56751c69218c80b17457f01e0fb4d56293f3704") // 실제 API 키로 변경해야 함
+                    .header("x-api-key", apiKey)
                     .url("https://clipdrop-api.co/cleanup/v1")
                     .post(requestBody)
                     .build()

@@ -1,7 +1,17 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
+
+val localProperties = Properties().apply {
+    rootProject.file("local.properties")
+        .takeIf { it.exists() }
+        ?.inputStream()
+        ?.use(::load)
+}
+
 
 android {
     namespace = "com.example.prac2"
@@ -13,6 +23,9 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+
+        val clipdropApiKey = localProperties.getProperty("CLIPDROP_API_KEY", "")
+        buildConfigField("String", "CLIPDROP_API_KEY", "\"$clipdropApiKey\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,6 +45,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
